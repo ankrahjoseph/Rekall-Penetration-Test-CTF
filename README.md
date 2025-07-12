@@ -14,3 +14,20 @@ I am tasked with using the offensive security skills that I’ve learned over th
 **Preparation**
 After logging into the Kali machine, I navigated to the directory hosting the docker container and started it.
 I accessed the application at http://192.168.14.35.
+
+**I also tested Rekall's Linux and Windows servers for vulnerabilities**
+
+# Linux Servers CTF
+Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
+
+I also tested Rekall's Linux servers for vulnerabilities
+
+**Preparation**
+After logging into the Kali machine, I navigated to the directory hosting the docker container and started it.
+I accessed Nessus at https://kali:8834/
+
+# Windows Servers CTF
+Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
+
+**Preparation**
+Used the attached Kali VM to conduct this test
