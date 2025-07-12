@@ -11,7 +11,7 @@ Rekall is about to go live with its business, and it needs penetration testers t
 
 I am tasked with using the offensive security skills that I’ve learned over the last couple of weeks to find any vulnerabilities in Rekall’s technical infrastructure and summarize the appropriate mitigations.
 
-**Preparation**
+**Preparation** :
 After logging into the Kali machine, I navigated to the directory hosting the docker container and started it.
 I accessed the application at http://192.168.14.35.
 
@@ -22,12 +22,12 @@ Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
 I also tested Rekall's Linux servers for vulnerabilities
 
-**Preparation**
+**Preparation** :
 After logging into the Kali machine, I navigated to the directory hosting the docker container and started it.
 I accessed Nessus at https://kali:8834/
 
 # Windows Servers CTF
 Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
-**Preparation**
+**Preparation** :
 Used the attached Kali VM to conduct this test
