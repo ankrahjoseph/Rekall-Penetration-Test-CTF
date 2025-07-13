@@ -22,7 +22,7 @@ I began the process by testing the web application and the first vulnerability I
 cross-site scripting ( XSS ) on the welcome page by inserting <script>alert('XSS');</script> in
 the 'Put Your Name Here' field.
 
-
+! [Flag 1] (https://github.com/ankrahjoseph/Web-Application-CTF/blob/aa4c759d71aab19b6afe7f3a1f47407a13bd057b/Rekall%20Images/f%201.png?raw=true)
 
 **I also tested Rekall's Linux and Windows servers for vulnerabilities**
 
