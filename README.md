@@ -100,11 +100,8 @@ I used the command injection vulnerability to find the old_disclaimer directory 
 # CTF Challenge: Rekall Linux Servers CTF
 Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
-I also tested Rekall's Linux servers for vulnerabilities
-
 ## Preparation
-After logging into the Kali machine, I navigated to the directory hosting the docker container and started it.
-I accessed Nessus at https://kali:8834/
+After logging into the Kali machine, I navigated to the directory hosting the docker container and started it. I accessed Nessus at https://kali:8834/
 
 ## Flags
 
@@ -112,6 +109,31 @@ I accessed Nessus at https://kali:8834/
 I did a WHOIS search on totalrekall.xyz and found sensitive data about the domain servers and
 domain registration and found flag 1
 
+![Flag 1](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%201.png)
+
+**Flag 2** </br>  
+I did a ping and NSlookup on totalrekall.xyz and got the ip address of the server which was flag 2.  
+
+**Flag 3** </br>  
+I used crt.sh to check their web certificate registration. and found out that, the domain had no valid certificates and found flag 3
+
+![Flag 3](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%203.png)
+
+**Flag 4** </br>  
+I did an nmap scan on the IP address and discovered that there were 5 hosts connected to the network for flag 4.
+
+![Flag 4](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%204.png)
+
+**Flag 5 and 6** </br>  
+I used a nessus to run an aggressive scan on each of the hosts and found out that 192.168.13.13 was running Drupal and 192.168.13.12 was vulnerable to Apache struts, which were flag 5 and 6.
+
+![Flag 5](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%205.png)  
+![Flag 6](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%206.png)
+
+**Flag 7** </br>  
+I used Metasploit’s msfconsole to run the (multi/http/tomcat_jsp_upload_bypass) on 192.168.13.10 and opened a shell session. Then I searched the system to find sensitive data and found flag 7.
+
+![Flag 7](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%207.png)
 
 
 # CTF Challenge: Rekall Windows Servers CTF
