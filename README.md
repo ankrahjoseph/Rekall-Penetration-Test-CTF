@@ -135,9 +135,36 @@ I used Metasploit’s msfconsole to run the (multi/http/tomcat_jsp_upload_bypass
 
 ![Flag 7](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%207.png)
 
+**Flag 8** </br>  
+I went back to msfconsole and the exploit exploit/multi/http/apache_mod_cgi_bash_env_exec on 192.168.13.11 and opened a meterpreter session which I used to check the /etc/sudoers file to find sensitive data about the host and found flag 8.
+
+![Flag 8](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%208.png)
+
+**Flag 9** </br>  
+I checked the /etc/passwd file to find all the users active on the system and found flag 9.
+
+![Flag 9](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%209.png)
+
+**Flag 10** </br>  
+I went back to msfconsole and used the exploit multi/http/struts2_content_type_ognl on 192.168.13.12 which opened a meterpreter session to the host. I searched on the system for sensitive data and found flag 10.
+
+![Flag](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%2010.png)
+
+**Flag 11** </br>  
+I tried several drupal exploits on meterpreter and got a session to 192.168.13.13 with the unix/webapp/drupal_restws_unserialize module. I checked the user ID of the session and that was flag 11.
+
+![Flag 11](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%2011.png)
+
+**Flag 12** </br>  
+From the WHOIS search, I realized the user alice was the sshuser for the domain; I connected to 192.168.13.14 using SSH with username and password alice:alice. Then I used a CVE-2019-14287 vulnerability to escalate my privileges to root user and found flag 12.
+
+![Flag 12](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Linux%20images/flag%2012.png)
 
 # CTF Challenge: Rekall Windows Servers CTF
 Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
 ## Preparation
 Used the attached Kali VM to conduct this test
+
+## Flags
+**Flag 1** </br>  
