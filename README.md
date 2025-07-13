@@ -168,3 +168,56 @@ Used the attached Kali VM to conduct this test
 
 ## Flags
 **Flag 1** </br>  
+I also found a github repository of rekall which contained the hash of the password of user trivera and I used John to crack the hash.
+
+![Flag 1a](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%201%20a.png)
+![Flag 1b](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%201%20b.png)
+
+**Flag 2** </br>  
+I did an nmap scan on the network 172.22.117.0/24 and found that there were two windows hosts connected. The host 172.22.117.20 had the http port open so I went to the browser and went to the page using the IP, it asked for a username and password then I logged in with trivera credential and found flag 2.
+
+![Flag 2a](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%202%20a.png)
+![Flag 2b](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%202.PNG)
+
+**Flag 3** </br>  
+The port scan also showed that the ftp port was open so I logged into ftp as anonymous and found flag 3, transferred it to my local host and viewed it.
+
+![Flag 3a](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%203%20a.png)
+![Flag 3](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%203.png)
+
+**Flag 4** </br>  
+From the nmap scan results, SLmail was running on port 25 and on POP3 port 110. I loaded msfconsole and used the windows/pop3/seattlelab_pass to open a meterpreter session,
+listed the files in the directory and discovered flag 4.
+
+![Flag 4](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%204.png)
+
+**Flag 5** </br>  
+The hint for flag 5 was to check scheduled tasks so I ran schtasks and found a task named flag5. I used the command (schtasks /query /TN flag5 /FO list /v) to view info about the task and found the flag as a comment.
+
+![Flag 5](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%205.png)
+
+**Flag 6** </br>  
+Using the same meterpreter session, I loaded kiwi and dumped the user hashes on the system and found flag 6, and ADMBob. I copied their hashes and used John to crack their passwords. Flag 6 was **Computer!**.
+
+![Flag 6-1](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%206%20-1.png)
+![Flag 6](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%206.png)
+
+**Flag 7** </br>  
+I listed the objects in the directory and moved into the Documents directory. Found flag 7 as a text file.
+
+![Flag 7](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%207.png)
+
+**Flag 8** </br>  
+Using the ADMBob credentials I cracked, I used the windows/smb/psexec to move laterally into the Server2019 machine. I connected into a shell and used the net user command to view the users on the system and found flag 8.
+
+![Flag 8](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%208.png)
+
+**Flag 9** </br>  
+I went to the root directory and listed the content and found flag 9.
+
+![Flag 9](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%209.png)
+
+**Flag 10** </br>  
+I went back to meterpreter and used the command dcsync_ntlm Administrator to view the hash for the Administrator account which was flag 10.
+
+![Flag 10](https://github.com/ankrahjoseph/Rekall-Penetration-Test-CTF/blob/main/Rekall%20Images/Rekall%20Windows%20Images/flag%2010.png)
