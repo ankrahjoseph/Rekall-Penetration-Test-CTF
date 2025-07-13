@@ -97,7 +97,7 @@ I used the command injection vulnerability to find the old_disclaimer directory 
 
 > **I also tested Rekall's Linux and Windows servers for vulnerabilities**
 
-# Linux Servers CTF
+# CTF Challenge: Rekall Linux Servers CTF
 Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
 I also tested Rekall's Linux servers for vulnerabilities
@@ -114,8 +114,8 @@ domain registration and found flag 1
 
 
 
-# Windows Servers CTF
+# CTF Challenge: Rekall Windows Servers CTF
 Tools used : Nessus, Kali, Mestasploit, John the ripper, PHP
 
-**Preparation** :
+## Preparation
 Used the attached Kali VM to conduct this test
